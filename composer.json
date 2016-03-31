@@ -1,0 +1,61 @@
+{
+    "name": "pgrau/ddd",
+    "description": "Training best practices of modern PHP development",
+    "authors": [
+        {
+            "name": "Pau F. Grau",
+            "email": "pau.ferran.grau@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": ["app/", "src/"] },
+        "files": [
+            "src/Training/Infrastructure/Service/Container/Container.php",
+            "src/Training/Infrastructure/UI/View/Plates/Template.php"
+        ]
+    },
+    "autoload-dev": {
+
+    },
+    "repositories": [
+
+    ],
+    "require": {
+        "php": "^5.6",
+        "nikic/fast-route": "^0.7.0",
+        "league/container": "^2.2",
+        "league/plates": "^3.1",
+        "monolog/monolog": "^1.18",
+        "ruflin/elastica": "^3.1",
+        "guzzlehttp/guzzle": "^6.2",
+        "symfony/console": "^3.0",
+        "ramsey/uuid": "^3.3",
+        "moontoast/math": "^1.1",
+        "ramsey/uuid-console": "^1.1",
+        "ramsey/uuid-doctrine": "^1.2"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.1",
+        "symfony/var-dumper": "^3.0",
+        "whoops/soap": "^1.0",
+        "phpunit/phpunit": "^5.2",
+        "mockery/mockery": "^0.9.4",
+        "maximebf/debugbar": "^1.11",
+        "fzaninotto/faker": "^1.5"
+    },
+    "scripts": {
+        "post-install-cmd": [
+
+        ],
+        "post-update-cmd": [
+
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "bin-dir": "bin",
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

@@ -1,0 +1,22 @@
+---
+ip: "192.168.7.8"
+memory: 1024
+cpus: 2
+
+authorize:
+    - ~/.ssh/id_rsa.pub
+    - ~/.ssh/id_dsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+    - ~/.ssh/id_dsa
+
+networking:
+    - public: true
+
+folders:
+    - map: ./
+      to: /var/www/default
+
+databases:
+    - example_database

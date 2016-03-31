@@ -1,0 +1,10 @@
+.vagrant
+.project
+.settings
+.idea
+*.swp
+*.DS_Store
+/composer.lock
+/metrics
+/bin
+/vendor
