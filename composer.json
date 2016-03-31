@@ -8,7 +8,7 @@
         }
     ],
     "autoload": {
-        "psr-0": { "": ["app/", "src/"] },
+        "psr-0": { "": ["src/"] },
         "files": [
             "src/Training/Infrastructure/Service/Container/Container.php",
             "src/Training/Infrastructure/UI/View/Plates/Template.php"
