@@ -19,7 +19,7 @@ final class AuthenticateService
             $anUser = $this->userRepository->findOneByUsername($request->username());
             $anUser->authenticate($request->password(), 'password_verify');
 
-            return $anUser;
+            return new AuthenticateResponse($anUser);
 
         } catch (\Exception $exception) {
             throw new AuthenticateServiceException($exception->getMessage());
