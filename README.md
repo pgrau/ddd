@@ -5,6 +5,13 @@
     
     Training some best practices of modern PHP development
 
+## Install assets
+    bower install
+    
+## Install components 
+    curl -sS https://getcomposer.org/installer | php
+    php composer.phar install    
+
 ## Vagrant
     Debian 8 Vagrant image
     which is preconfigured for testing PHP apps and developing extensions across many versions of PHP.
@@ -13,9 +20,6 @@
 ## Set up the project with Vagrant
     Edit your /etc/hosts file  
     192.168.7.8 training.dev
-
-    curl -sS https://getcomposer.org/installer | php
-    php composer.phar install
     
     vagrant up
     vagrant ssh
@@ -32,17 +36,17 @@
 ## Coding Style Guide
    [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 
-## Route
+## Routes
     FastRoute - Fast request router for PHP https://github.com/nikic/FastRoute
     
 ## Service Container (Dependency Injection)
     Small but powerful dependency injection container http://container.thephpleague.com
     
-## Template    
+## Templates    
     Native PHP template system http://platesphp.com
     All templates are in: src/Training/Infrastructure/UI/View/Plates
 
-## Controller
+## Controllers
     All controllers are in: src/Training/Infrastructure/UI/Controller
 
 ## Unit Tests
