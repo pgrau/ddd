@@ -12,6 +12,7 @@ function getTemplate(ContainerInterface $container)
 
     $template->addFolder('layout', __DIR__ . '/view/layout');
     $template->addFolder('home', __DIR__ . '/view/home');
+    $template->addFolder('login', __DIR__ . '/view/login');
 
     $template->loadExtensions(
         [
