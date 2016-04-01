@@ -25,10 +25,10 @@ Training best practices of modern PHP development
     You can run now  the app in your browser: http://training.dev
     
 ## Route
-    We use FastRoute - Fast request router for PHP https://github.com/nikic/FastRoute
+    FastRoute - Fast request router for PHP https://github.com/nikic/FastRoute
     
 ## Service Container (Dependency Injection)
-    We use Small but powerful dependency injection container http://container.thephpleague.com
+    Small but powerful dependency injection container http://container.thephpleague.com
     
 ## Template    
-    We use Native PHP template system http://platesphp.com
+    Native PHP template system http://platesphp.com
