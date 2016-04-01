@@ -8,7 +8,7 @@
 ## Vagrant
     Debian 8 Vagrant image
     which is preconfigured for testing PHP apps and developing extensions across many versions of PHP.
-    https://github.com/rlerdorf/php7dev
+    You can see all documentation in doc/vagrant or https://github.com/rlerdorf/php7dev
     
 ## Set up the project with Vagrant
     Edit your /etc/hosts file  
@@ -30,10 +30,10 @@
     You can run now  the app in your browser: http://training.dev
 
 ## Coding Style Guide
-    PSR-2 https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
+   [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 
 ## Route
-    FastRoute - Fast request router for PHP https://github.com/nikic/FastRoute
+    [FastRoute](https://github.com/nikic/FastRoute) - Fast request router for PHP https://github.com/nikic/FastRoute
     
 ## Service Container (Dependency Injection)
     Small but powerful dependency injection container http://container.thephpleague.com
