@@ -1,0 +1,21 @@
+{
+  "name": "training",
+  "homepage": "https://github.com/pgrau/ddd",
+  "authors": [
+    "Pau <pau.ferran.grau@gmail.com>"
+  ],
+  "description": "Training some best practices of modern PHP development",
+  "main": "",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}
