@@ -8,6 +8,7 @@ $whoops->register();
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $routeCollector) {
     \Training\Infrastructure\UI\Controller\Home::addRoutes($routeCollector);
+    \Training\Infrastructure\UI\Controller\Login::addRoutes($routeCollector);
 });
 
 // Fetch method and URI from somewhere
