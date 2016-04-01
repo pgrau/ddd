@@ -36,3 +36,6 @@ Training best practices of modern PHP development
     
 ## Template    
     Native PHP template system http://platesphp.com
+
+## Unit testing
+    You can run the tests with the command: php bin/phpunit
