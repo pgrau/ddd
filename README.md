@@ -45,5 +45,6 @@
 ## Controller
     All controllers are in: src/Training/Infrastructure/UI/Controller
 
-## Unit testing
-    You can run the tests with the command: php bin/phpunit
+## Unit Tests
+    Unit Tests are of course also available. 
+    You can run the tests with the follow command: php bin/phpunit
