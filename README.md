@@ -1,9 +1,7 @@
-pgrau/ddd
-=========
-
-[![Build Status](https://secure.travis-ci.org/pgrau/ddd.svg?branch=master)](http://travis-ci.org/pgrau/ddd)
 
 # DDD and Hexagonal Architecture Application
+
+[![Build Status](https://secure.travis-ci.org/pgrau/ddd.svg?branch=master)](http://travis-ci.org/pgrau/ddd)
 Training best practices of modern PHP development
 
 ## Vagrant
