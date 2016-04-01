@@ -36,6 +36,10 @@ Training best practices of modern PHP development
     
 ## Template    
     Native PHP template system http://platesphp.com
+    All templates are in: src/Training/Infrastructure/UI/View/Plates
+
+## Controller
+    All controllers are in: src/Training/Infrastructure/UI/Controller
 
 ## Unit testing
     You can run the tests with the command: php bin/phpunit
