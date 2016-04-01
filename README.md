@@ -2,7 +2,8 @@
 # DDD and Hexagonal Architecture Application
 
 [![Build Status](https://secure.travis-ci.org/pgrau/ddd.svg?branch=master)](http://travis-ci.org/pgrau/ddd)
-Training best practices of modern PHP development
+    
+    Training some best practices of modern PHP development
 
 ## Vagrant
     Debian 8 Vagrant image
