@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phpunit
+         cacheTokens="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         stopOnError="false"
+         stopOnFailure="false"
+         verbose="false">
+
+    <php>
+        <ini name="intl.default_locale" value="en" />
+        <ini name="intl.error_level" value="0" />
+        <ini name="memory_limit" value="-1" />
+        <ini name="max_execution_time" value="-1" />
+        <ini name="date.timezone" value="Europe/Madrid" />
+        <ini name="error_reporting" value="E_ALL" />
+        <ini name="zend.enable_gc" value="0" />
+    </php>
+
+    <testsuites>
+        <testsuite name="Training App. Unit Tests">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <listeners>
+        <listener class="\Mockery\Adapter\Phpunit\TestListener"/>
+        <listener class="\MyBuilder\PhpunitAccelerator\TestListener"/>
+        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener">
+            <arguments>
+                <array>
+                    <element key="slowThreshold">
+                        <integer>500</integer>
+                    </element>
+                    <element key="reportLength">
+                        <integer>5</integer>
+                    </element>
+                </array>
+            </arguments>
+        </listener>
+    </listeners>
+
+    <filter>
+        <whitelist>
+
+        </whitelist>
+
+        <blacklist>
+
+        </blacklist>
+    </filter>
+
+    <groups>
+        <exclude>
+            <group>Integration</group>
+        </exclude>
+    </groups>
+
+</phpunit>
