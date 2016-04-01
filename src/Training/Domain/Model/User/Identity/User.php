@@ -31,6 +31,10 @@ class User
 
     public function authenticate($password, callable $checkHash)
     {
-        return (bool) $checkHash($password, $this->passwordHash);
+        if (! $checkHash($password, $this->passwordHash)) {
+            throw new \InvalidArgumentException('Wrong password');
+        }
+
+        return true;
     }
 }

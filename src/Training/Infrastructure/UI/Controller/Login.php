@@ -4,11 +4,11 @@ namespace Training\Infrastructure\UI\Controller;
 
 use FastRoute\RouteCollector;
 
-final class Home extends Base
+final class Login extends Base
 {
     public static function addRoutes(RouteCollector $routeCollector)
     {
-        $routeCollector->addRoute('GET', '/', [self::class, 'init']);
+        $routeCollector->addRoute('GET', '/login', [self::class, 'init']);
     }
 
     public function init()
@@ -16,6 +16,6 @@ final class Home extends Base
         /** @var $tpl \League\Plates\Engine */
         $tpl = $this->container->get('template');
 
-        return $tpl->render('home::index', []);
+        return $tpl->render('login::index', []);
     }
 }
