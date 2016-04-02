@@ -4,7 +4,9 @@
             repository-class="Training\Infrastructure\Persistence\Doctrine\User\Identity\DoctrineUserRepository"
             table="user">
 
-        <field name="id" type="guid" />
+        <id name="id" type="guid">
+            <generator strategy="NONE"/>
+        </id>
         <field name="name" length="255" nullable="false" />
         <field name="lastName" column="last_name" length="255" />
         <field name="username"  length="255" unique="true" />
