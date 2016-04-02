@@ -19,4 +19,4 @@ folders:
       to: /var/www/default
 
 databases:
-    - example_database
+    - training
