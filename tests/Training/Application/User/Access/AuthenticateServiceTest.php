@@ -3,6 +3,8 @@
 namespace Training\Application\User\Access;
 
 use \Mockery as Mockery;
+use Training\Application\Service\User\Access\AuthenticateRequest;
+use Training\Application\Service\User\Access\AuthenticateService;
 
 class AuthenticateServiceTest extends \PHPUnit_Framework_TestCase
 {
