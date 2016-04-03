@@ -10,7 +10,6 @@
     "autoload": {
         "psr-0": { "": ["src/"] },
         "files": [
-            "config/Parameters.php",
             "src/Training/Infrastructure/Service/Container/Container.php",
             "src/Training/Infrastructure/UI/View/Plates/Template.php"
         ]
