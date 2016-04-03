@@ -34,7 +34,8 @@
         "moontoast/math": "^1.1",
         "ramsey/uuid-console": "^1.1",
         "ramsey/uuid-doctrine": "^1.2",
-        "doctrine/orm": "^2.5"
+        "doctrine/orm": "^2.5",
+        "beberlei/assert": "^2.5"
     },
     "require-dev": {
         "filp/whoops": "^2.1",
