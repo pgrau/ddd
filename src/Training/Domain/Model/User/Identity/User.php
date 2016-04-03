@@ -37,4 +37,25 @@ class User
 
         return true;
     }
+
+    public function encryptPassword($password, $algorithm, callable $createHash)
+    {
+        $this->passwordHash = $createHash($password, $algorithm);
+
+        return $this;
+    }
+
+    public function confirmPassword($password, $confirmPassword)
+    {
+        if ($password !== $confirmPassword) {
+            throw new \InvalidArgumentException('Password and confirm password must be equal');
+        }
+
+        return true;
+    }
+
+    public function name()
+    {
+        return $this->name;
+    }
 }
