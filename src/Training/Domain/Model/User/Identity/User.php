@@ -28,7 +28,7 @@ class User
        $this->username = $credentials->username();
        $this->passwordHash = $credentials->password();
     }
-    
+
     public function encryptPassword($password, $algorithm, callable $createHash)
     {
         $this->passwordHash = $createHash($password, $algorithm);
