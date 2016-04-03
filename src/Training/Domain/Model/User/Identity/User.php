@@ -28,16 +28,7 @@ class User
        $this->username = $credentials->username();
        $this->passwordHash = $credentials->password();
     }
-
-    public function authenticate($password, callable $checkHash)
-    {
-        if (! $checkHash($password, $this->passwordHash)) {
-            throw new \InvalidArgumentException('Wrong password');
-        }
-
-        return true;
-    }
-
+    
     public function encryptPassword($password, $algorithm, callable $createHash)
     {
         $this->passwordHash = $createHash($password, $algorithm);
