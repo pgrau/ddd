@@ -58,7 +58,7 @@
    [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 
 ## Routes
-    [FastRoute link](https://github.com/nikic/FastRoute) - Fast request router for PHP
+    FastRoute link - Fast request router for PHP https://github.com/nikic/FastRoute
     
 ## Service Container (Dependency Injection)
     Small but powerful dependency injection container http://container.thephpleague.com
