@@ -7,11 +7,11 @@ use Doctrine\ORM\Tools\Setup;
 
 class EntityManagerFactory
 {
-    private $paremeters;
+    private $dbParams;
 
     public function __construct(array $paremeters)
     {
-        $this->paremeters = $paremeters;
+        $this->dbParams = $paremeters;
     }
 
     /**
@@ -19,13 +19,12 @@ class EntityManagerFactory
      */
     public function build()
     {
-        $db = $this->paremeters['databases']['bd1'];
         $dirMapping = [
             __DIR__.'/mapping'
         ];
 
         return EntityManager::create(
-            $db,
+            $this->dbParams,
             Setup::createXMLMetadataConfiguration($dirMapping)
         );
     }
