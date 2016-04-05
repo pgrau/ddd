@@ -6,7 +6,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
-use Training\Application\Service\User\Access\CreateANewUserRequest;
+use Training\Application\Service\User\Create\CreateANewUserRequest;
 
 class CreateUserCommand extends Command
 {
