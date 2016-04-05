@@ -2,7 +2,7 @@
 
 namespace Training\Application\Service\User\Create;
 
-class CreateUserServiceException extends \Exception
+class CreateANewUserServiceException extends \Exception
 {
 
 }

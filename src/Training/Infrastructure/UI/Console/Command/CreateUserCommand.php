@@ -6,7 +6,7 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
-use Training\Application\Service\User\Access\CreateUserRequest;
+use Training\Application\Service\User\Access\CreateANewUserRequest;
 
 class CreateUserCommand extends Command
 {
@@ -29,7 +29,7 @@ class CreateUserCommand extends Command
         $questionPassword = new Question('Please enter your password: ');
         $questionConfirmPassword = new Question('Please confirm your password: ');
 
-        $request = new CreateUserRequest(
+        $request = new CreateANewUserRequest(
             $helper->ask($input, $output, $questionName),
             $helper->ask($input, $output, $questionLastName),
             $helper->ask($input, $output, $questionNickname),
@@ -38,8 +38,8 @@ class CreateUserCommand extends Command
         );
 
         try {
-            /** @var $appService \Training\Application\Service\User\Access\CreateUserService */
-            $appService = $container->get('create_user_service');
+            /** @var $appService \Training\Application\Service\User\Access\CreateANewUserService */
+            $appService = $container->get('create_new_user_service');
             $response = $appService->execute($request);
 
             $output->writeln("<info>Hey {$response->user()->name()}, welcome to the app.</info>");

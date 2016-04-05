@@ -2,7 +2,7 @@
 
 namespace Training\Application\Service\User\Access;
 
-class CreateUserRequest
+class CreateANewUserRequest
 {
     private $name;
 

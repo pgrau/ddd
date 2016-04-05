@@ -4,7 +4,7 @@ namespace Training\Application\Service\User\Access;
 
 use Training\Domain\Model\User\Identity\User;
 
-class CreateUserResponse
+class CreateANewUserResponse
 {
     /**
      * @var User

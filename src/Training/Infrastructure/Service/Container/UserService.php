@@ -8,7 +8,7 @@ class UserService extends AbstractServiceProvider
 {
     protected $provides = [
         'user_repository',
-        'create_user_service'
+        'create_new_user_service'
     ];
 
     public function register()
@@ -28,7 +28,8 @@ class UserService extends AbstractServiceProvider
 
     private function registerCreateUserService()
     {
-        $this->getContainer()->add('create_user_service', 'Training\Application\Service\User\Access\CreateUserService')
+        $namespace = 'Training\Application\Service\User\Access\CreateANewUserService';
+        $this->getContainer()->add('create_new_user_service', $namespace)
             ->withArgument($this->getContainer()->get('user_repository'))
         ;
     }
