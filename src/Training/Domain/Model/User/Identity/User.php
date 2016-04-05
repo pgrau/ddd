@@ -2,6 +2,7 @@
 
 namespace Training\Domain\Model\User\Identity;
 
+use Common\Domain\Model\ProtectsInvariants;
 use Training\Domain\Model\Credentials;
 use Training\Domain\Model\FullName;
 
@@ -19,6 +20,8 @@ class User
     private $username;
 
     private $passwordHash;
+
+    use ProtectsInvariants;
 
     public function __construct(UserId $id, FullName $fullName, Credentials $credentials)
     {
@@ -38,11 +41,7 @@ class User
 
     public function confirmPassword($password, $confirmPassword)
     {
-        if ($password !== $confirmPassword) {
-            throw new \InvalidArgumentException('Password and confirm password must be equal');
-        }
-
-        return true;
+        $this->assertSame($password, $confirmPassword, 'Password and confirm password must be equal');
     }
 
     public function name()
