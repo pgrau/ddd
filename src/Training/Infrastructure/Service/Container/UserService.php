@@ -28,7 +28,7 @@ class UserService extends AbstractServiceProvider
 
     private function registerCreateUserService()
     {
-        $namespace = 'Training\Application\Service\User\Access\CreateANewUserService';
+        $namespace = 'Training\Application\Service\User\Create\CreateANewUserService';
         $this->getContainer()->add('create_new_user_service', $namespace)
             ->withArgument($this->getContainer()->get('user_repository'))
         ;
