@@ -38,7 +38,7 @@ class CreateUserCommand extends Command
         );
 
         try {
-            /** @var $appService \Training\Application\Service\User\Access\CreateANewUserService */
+            /** @var $appService \Training\Application\Service\User\Create\CreateANewUserService */
             $appService = $container->get('create_new_user_service');
             $response = $appService->execute($request);
 
