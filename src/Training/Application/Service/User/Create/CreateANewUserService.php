@@ -1,8 +1,7 @@
 <?php
 
-namespace Training\Application\Service\User\Access;
+namespace Training\Application\Service\User\Create;
 
-use Training\Application\Service\User\Create\CreateANewUserServiceException;
 use Training\Application\Service\User\Create\CreateUserServiceException;
 use Training\Domain\Model\Credentials;
 use Training\Domain\Model\FullName;

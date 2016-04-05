@@ -1,6 +1,6 @@
 <?php
 
-namespace Training\Application\Service\User\Access;
+namespace Training\Application\Service\User\Create;
 
 class CreateANewUserRequest
 {

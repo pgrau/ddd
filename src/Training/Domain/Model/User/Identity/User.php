@@ -49,4 +49,9 @@ class User
     {
         return $this->name;
     }
+
+    public function id()
+    {
+        return $this->id;
+    }
 }
