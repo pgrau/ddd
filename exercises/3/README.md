@@ -1,2 +1,2 @@
 ## Práctica nº3
-   [Funcionalidad](../files/ejercicio3.png)
+   ![Funcionalidad](../files/ejercicio3.png)
