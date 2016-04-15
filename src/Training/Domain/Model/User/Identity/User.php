@@ -8,6 +8,9 @@ use Training\Domain\Model\FullName;
 
 class User
 {
+    const PASSWORD_ALGORITHM = PASSWORD_DEFAULT;
+    const PASSWORD_HASH = 'password_hash';
+
     /**
      * @var UserId
      */
@@ -41,7 +44,7 @@ class User
 
     public function confirmPassword($password, $confirmPassword)
     {
-        $this->assertSame($password, $confirmPassword, 'Password and confirm password must be equal');
+        $this->assertArgumentsAreSame($password, $confirmPassword, 'Password and confirm password must be equal');
     }
 
     public function name()

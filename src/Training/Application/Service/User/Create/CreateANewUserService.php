@@ -26,7 +26,7 @@ final class CreateANewUserService
         try {
             $anUser = $this->createANewUser($request);
             $anUser->confirmPassword($request->password(), $request->confirmPassword());
-            $anUser->encryptPassword($request->password(), PASSWORD_DEFAULT, 'password_hash');
+            $anUser->encryptPassword($request->password(), User::PASSWORD_ALGORITHM, User::PASSWORD_HASH);
 
             $this->userRepository->persist($anUser);
 
