@@ -25,6 +25,10 @@
         </testsuite>
     </testsuites>
 
+    <logging>
+        <log type="coverage-clover" target="build/logs/clover.xml"/>
+    </logging>
+
     <listeners>
         <listener class="\Mockery\Adapter\Phpunit\TestListener"/>
         <listener class="\MyBuilder\PhpunitAccelerator\TestListener"/>
@@ -44,7 +48,7 @@
 
     <filter>
         <whitelist>
-
+            <directory>./src</directory>
         </whitelist>
 
         <blacklist>

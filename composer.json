@@ -45,7 +45,8 @@
         "maximebf/debugbar": "^1.11",
         "fzaninotto/faker": "^1.5",
         "mybuilder/phpunit-accelerator": "^1.1",
-        "johnkary/phpunit-speedtrap": "^1.0"
+        "johnkary/phpunit-speedtrap": "^1.0",
+        "satooshi/php-coveralls": "^1.0"
     },
     "scripts": {
         "post-install-cmd": [

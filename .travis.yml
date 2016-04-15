@@ -10,7 +10,12 @@ before_install:
 install:
     - php composer.phar install
 
-script: bin/phpunit
+script:
+    - mkdir -p build/logs
+    - php vendor/bin/phpunit -c phpunit-metrics-without-infrastructure.xml.dist
+
+after_success:
+    - travis_retry php vendor/bin/coveralls
 
 matrix:
   allow_failures:
