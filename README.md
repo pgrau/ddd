@@ -55,6 +55,14 @@
     
     php bin/doctrine orm:schema-tool:update --force
     
+## Message Queue
+
+    Vagrant contain a RabbitMQ
+    user vagrant
+    pwd  vagrant
+    
+    http://training.dev:15672
+    
 ## Coding Style Guide
    [PSR-2](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md)
 
