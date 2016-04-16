@@ -9,7 +9,8 @@ use Training\Domain\Model\FullName;
 class User
 {
     const PASSWORD_ALGORITHM = PASSWORD_DEFAULT;
-    const PASSWORD_HASH = 'password_hash';
+    const PASSWORD_HASH      = 'password_hash';
+    const PASSWORD_VERIFY    = 'password_verify';
 
     /**
      * @var UserId
@@ -47,6 +48,14 @@ class User
         $this->assertArgumentsAreSame($password, $confirmPassword, 'Password and confirm password must be equal');
     }
 
+    public function authenticate($password, $passwordHash, callable $verify)
+    {
+        if (!$verify($password, $passwordHash)) {
+            throw new UserException('Incorrect password');
+        }
+        return true;
+    }
+
     public function name()
     {
         return $this->name;
@@ -55,5 +64,10 @@ class User
     public function id()
     {
         return $this->id;
+    }
+
+    public function passwordHash()
+    {
+        return $this->passwordHash;
     }
 }

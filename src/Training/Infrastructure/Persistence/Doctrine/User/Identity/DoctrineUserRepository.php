@@ -13,4 +13,15 @@ class DoctrineUserRepository extends EntityRepository implements UserRepository
         $this->_em->persist($user);
         $this->_em->flush();
     }
+
+    public function findOneByUsername($username)
+    {
+        $anUser = $this->_em->getRepository(User::class)->findOneBy(['username' => $username]);
+
+        if (null === $anUser) {
+            throw new DoctrineUserRepositoryException('Not exist an user with username ' . $username);
+        }
+
+        return $anUser;
+    }
 }
