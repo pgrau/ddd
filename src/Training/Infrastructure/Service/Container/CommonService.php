@@ -13,7 +13,8 @@ class CommonService extends AbstractServiceProvider
         'entity_manager',
         'doctrine_path_mapping',
         'debugbar',
-        'template'
+        'template',
+        'event_store'
     ];
 
     public function register()
@@ -21,6 +22,7 @@ class CommonService extends AbstractServiceProvider
         $this->registerDbParams();
         $this->registerDoctrinePathMapping();
         $this->registerEntityManager();
+        $this->registerEventStore();
         $this->registerDebugbar();
         $this->registerTemplate();
     }
@@ -51,6 +53,13 @@ class CommonService extends AbstractServiceProvider
         $config = Setup::createXMLMetadataConfiguration($this->getContainer()->get('doctrine_path_mapping'));
         $entityManager = EntityManager::create($this->getContainer()->get('db_params'), $config);
         $this->getContainer()->add('entity_manager', $entityManager);
+    }
+
+    private function registerEventStore()
+    {
+        $em = $this->getContainer()->get('entity_manager');
+        $eventStore = $em->getRepository('Ddd\Domain\Event\StoredEvent');
+        $this->getContainer()->add('event_store', $eventStore);
     }
 
     private function registerDebugbar()

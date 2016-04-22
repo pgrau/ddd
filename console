@@ -7,4 +7,5 @@ use Symfony\Component\Console\Application;
 
 $app = new Application('Console Tool', '1.0.0');
 $app->add(new \Training\Infrastructure\UI\Console\Command\CreateUserCommand());
+$app->add(new \Training\Infrastructure\UI\Console\Command\AuthenticateUserCommand());
 $app->run();

@@ -36,6 +36,13 @@ switch ($routeInfo[0]) {
         $vars = $routeInfo[2];
         try {
             $serviceContainer = \Training\Infrastructure\Service\Container\getContainer();
+
+            \Ddd\Domain\DomainEventPublisher::instance()->subscribe(
+                new \Ddd\Domain\PersistDomainEventSubscriber(
+                    $serviceContainer->get('event_store')
+                )
+            );
+
             $response = (new $controller($serviceContainer))->$action($vars);
         } catch (\Exception $e) {
             $response = $e->getMessage();

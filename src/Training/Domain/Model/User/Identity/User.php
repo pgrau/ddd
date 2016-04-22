@@ -48,11 +48,12 @@ class User
         $this->assertArgumentsAreSame($password, $confirmPassword, 'Password and confirm password must be equal');
     }
 
-    public function authenticate($password, $passwordHash, callable $verify)
+    public function authenticate($password, callable $verify)
     {
-        if (!$verify($password, $passwordHash)) {
+        if (!$verify($password, $this->passwordHash())) {
             throw new UserException('Incorrect password');
         }
+
         return true;
     }
 

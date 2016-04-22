@@ -3,18 +3,21 @@
 namespace Training\Infrastructure\Service\Container;
 
 use League\Container\ServiceProvider\AbstractServiceProvider;
+use Training\Application\Service\User\Access\AuthenticateUserService;
 
 class UserService extends AbstractServiceProvider
 {
     protected $provides = [
         'user_repository',
-        'create_new_user_service'
+        'create_new_user_service',
+        'authenticate_user_service'
     ];
 
     public function register()
     {
         $this->registerUserRepository();
         $this->registerCreateUserService();
+        $this->registerAuthenticateUserService();
     }
 
     private function registerUserRepository()
@@ -30,6 +33,14 @@ class UserService extends AbstractServiceProvider
     {
         $namespace = 'Training\Application\Service\User\Create\CreateANewUserService';
         $this->getContainer()->add('create_new_user_service', $namespace)
+            ->withArgument($this->getContainer()->get('user_repository'))
+        ;
+    }
+
+    private function registerAuthenticateUserService()
+    {
+        $namespace = AuthenticateUserService::class;
+        $this->getContainer()->add('authenticate_user_service', $namespace)
             ->withArgument($this->getContainer()->get('user_repository'))
         ;
     }

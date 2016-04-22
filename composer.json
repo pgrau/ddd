@@ -34,7 +34,9 @@
         "ramsey/uuid-console": "^1.1",
         "ramsey/uuid-doctrine": "^1.2",
         "doctrine/orm": "^2.5",
-        "beberlei/assert": "^2.5"
+        "beberlei/assert": "^2.5",
+        "php-amqplib/php-amqplib": "^2.6",
+        "carlosbuenosvinos/ddd": "dev-master#6271e82a42d05267175c6d7227adbf7901b09493"
     },
     "require-dev": {
         "filp/whoops": "^2.1",
